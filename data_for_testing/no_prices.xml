@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<TOURS>
+    <TOUR>
+        <Title><![CDATA[Anzac &amp; Egypt Combo Tour]]></Title>
+        <Code>AE-19</Code>
+        <Duration>18</Duration>
+        <Start>Istanbul</Start>
+        <End>Cairo</End>
+        <Inclusions>
+            <![CDATA[<div style="margin: 1px 0px; padding: 1px 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-align: justify; line-height: 19px; color: rgb(6, 119, 179);">The tour price&nbsp; cover the following services: <b style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background-color: transparent;">Accommodation</b>; 5, 4&nbsp;and&nbsp;3 star hotels&nbsp;&nbsp;</div>]]>
+        </Inclusions>
+    </TOUR>
+</TOURS>
