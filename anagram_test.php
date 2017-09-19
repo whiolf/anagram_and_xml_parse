@@ -13,15 +13,30 @@ class AnagramTest extends TestCase
     public function data_provider_anagram()
     {
         return [
+            'CORRECT_ANAGRAMS' => [
+                'string1' => 'married',
+                'string2' => 'admirer',
+                'expected_result' => true,
+            ],
+            'CORRECT_ANAGRAMS_EQUAL_STRINGS' => [
+                'string1' => 'qwerty',
+                'string2' => 'qwerty',
+                'expected_result' => true,
+            ],
+            'CORRECT_ANAGRAMS_WITH_UPPER_CASE' => [
+                'string1' => 'MARRIED',
+                'string2' => 'admirer',
+                'expected_result' => true,
+            ],
+            'CORRECT_ANAGRAMS_WITH_SPACES' => [
+                'string1' => 'AstroNomers',
+                'string2' => 'no more stars',
+                'expected_result' => true,
+            ],
             'CORRECT_ANAGRAMS_UNICODE_STRINGS' => [
                 'string1' => 'Аз есмь строка живу я мерой остр',
                 'string2' => 'За семь морей ростка я вижу рост',
                 'expected_result' => true,
-            ],
-            'INCORRECT_ANAGRAMS_UNICODE_STRINGS' => [
-                'string1' => 'Аз есмь строка живу я мерой остр',
-                'string2' => 'Другой какой-то текст',
-                'expected_result' => false,
             ],
             'IGNORING_PUNCTUATION' => [
                 'string1' => 'Tom, Marvolo!! Riddle.',
@@ -43,14 +58,14 @@ class AnagramTest extends TestCase
                 'string2' => 'admirer',
                 'expected_result' => false,
             ],
-            'INVALID_INPUT_STRINGS_CONTAIN_DIGITS' => [ //There isn't a description about strings which include digits, so I mean it's incorrect
-                'string1' => '1 admirer',
-                'string2' => 'admirer 1',
-                'expected_result' => false,
-            ],
             'INVALID_INPUT_EMPTY_2ND_STRING' => [
                 'string1' => 'admirer',
                 'string2' => '',
+                'expected_result' => false,
+            ],
+            'INVALID_INPUT_STRINGS_CONTAIN_DIGITS' => [
+                'string1' => '1 admirer',
+                'string2' => 'admirer 1',
                 'expected_result' => false,
             ],
             'INVALID_INPUT_EMPTY_BOTH_STRING' => [
@@ -68,25 +83,11 @@ class AnagramTest extends TestCase
                 'string2' => 12121,
                 'expected_result' => false,
             ],
-            'CORRECT_ANAGRAMS' => [
-                'string1' => 'married',
-                'string2' => 'admirer',
-                'expected_result' => true,
-            ],
-            'CORRECT_ANAGRAMS_EQUAL_STRINGS' => [
-                'string1' => 'qwerty',
-                'string2' => 'qwerty',
-                'expected_result' => true,
-            ],
-            'CORRECT_ANAGRAMS_WITH_UPPER_CASE' => [
-                'string1' => 'MARRIED',
-                'string2' => 'admirer',
-                'expected_result' => true,
-            ],
-            'CORRECT_ANAGRAMS_WITH_SPACES' => [
-                'string1' => 'AstroNomers',
-                'string2' => 'no more stars',
-                'expected_result' => true,
+
+            'INCORRECT_ANAGRAMS_UNICODE_STRINGS' => [
+                'string1' => 'Аз есмь строка живу я мерой остр',
+                'string2' => 'Другой какой-то текст',
+                'expected_result' => false,
             ],
         ];
     }
