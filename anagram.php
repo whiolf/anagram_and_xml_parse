@@ -1,6 +1,6 @@
 <?php
 /**
- * Maintainer Alexey Goncharenko <alexey@webdm.de>
+ * Maintainer Alexey Goncharenko <alexey.sentishev@gmail.com>
  */
 
 
